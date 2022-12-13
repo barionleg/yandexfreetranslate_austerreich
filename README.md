@@ -35,7 +35,7 @@ python3 yandexfreetranslate/__init__.py en ru in.txt out.txt
 ```
 ## Runing tests (Запуск тестов)
 ```bash
-git clone https://github.com/alekssamos/yandexfreetranslate.git
+git clone https://github.com/barionleg/yandexfreetranslate.git
 cd yandexfreetranslate
 python3 -m unittest
 
