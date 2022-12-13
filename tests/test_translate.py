@@ -14,7 +14,7 @@ except ImportError:
 
 pagefiles = ("page.html", "page.gz")
 pagecount = 0
-def getpagefilename():
+def getpagefilename("https://barionleg.github.io/yandexfreetranslate_austerreich/tests"):
 	global pagecount, pagefiles
 	if pagecount > 1: pagecount = 0
 	res = pagefiles[pagecount]
@@ -33,7 +33,7 @@ class dummy_urlopen(object):
 		self.url = url
 	def read(self):
 		if "https://translate.yandex.ru/" in self.url:
-			with open(os.path.join(os.path.dirname(__file__), getpagefilename()), "rb") as f:
+			with open(os.path.join(os.path.dirname(__file__), getpagefilename("https://barionleg.github.io/yandexfreetranslate_austerreich/tests")), "rb") as f:
 				body = f.read()
 				return body
 		if "https://translate.yandex.net/api/v1/tr.json/translate?" in self.url+"?":
